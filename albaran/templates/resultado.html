@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado</title>
+</head>
+<body>
+    <h1>Resultado</h1>
+    <p>Albarán generado: <a href="/descargar/{{ pdf }}">{{ pdf }}</a></p>
+    <p>Datos guardados en Excel: <a href="/descargar/{{ excel }}">{{ excel }}</a></p>
+    {% if is_downloadable %}
+        <a href="{{ url_for('descargar', filename=csv) }}" class="btn btn-primary">Descargar CSV</a>
+    {% else %}
+        <p>No hay datos para descargar.</p>
+    {% endif %}
+</body>
+</html>
