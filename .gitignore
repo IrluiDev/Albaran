@@ -132,6 +132,7 @@ venv.bak/
 *.cfg
 *lib64*
 lib64/*
+/lib64*/*
 
 # Spyder project settings
 .spyderproject
